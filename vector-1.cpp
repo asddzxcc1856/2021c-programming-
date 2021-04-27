@@ -1,4 +1,4 @@
-#include <iostream> // ¤Gºûvector
+#include <iostream> // Â¤GÂºÃ»vector
 #include <vector>
 using namespace std;
 
@@ -14,7 +14,7 @@ int main ()
          
          cin >> a;
          v2.push_back(a);
-      
+       
       }
       v.push_back(v2);
    }
