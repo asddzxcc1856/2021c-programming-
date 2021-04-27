@@ -1,12 +1,12 @@
-#include <iostream>
-#include <cstring>
+#include <iostream>//引用輸出
+#include <cstring>//引用memset()
 using namespace std;
 
-int c[3][3]={{2,2,2},{2,2,2},{2,2,2}};
-int d[3][3]={{2,2,2},{2,2,2},{2,2,2}}; 
-int s[3][3];
+int c[3][3]={{2,2,2},{2,2,2},{2,2,2}};//c矩陣 3*3
+int d[3][3]={{2,2,2},{2,2,2},{2,2,2}};//d矩陣 3*3
+int s[3][3];//s矩陣 3*3 存結果
 
-void add()
+void add()//相加
 {
    memset(s,0,sizeof(s));
    for (int i=0;i<3;i++)
@@ -18,7 +18,7 @@ void add()
    }
 }
 
-void sub()
+void sub()//相減
 {
    memset(s,0,sizeof(s));
    for (int i=0;i<3;i++)
@@ -30,7 +30,7 @@ void sub()
    }
 }
 
-void mul()
+void mul()//相乘
 {
    memset(s,0,sizeof(s));
    for (int i=0;i<3;i++)
@@ -45,7 +45,7 @@ void mul()
    }
 }
 
-void print()
+void print()//輸出
 {
    for (int i=0;i<3;i++)
    {
@@ -59,10 +59,12 @@ void print()
 
 int main ()
 {
-   add();
-   print();
-   sub();
-   print();
-   mul();
-   print();
+   add();//相加
+   print();//輸出
+   
+   sub();//相減
+   print();//輸出
+   
+   mul();//相乘
+   print();//輸出
 } 
