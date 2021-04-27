@@ -34,7 +34,7 @@ int main ()
    
    
    //============================================================================================================
-   https://github.com/asddzxcc1856/2021c-/blob/main/sort()-2.cpp
+
    
    //排序函式sort(array address , array address + 長度 , 比較函式); 
    sort(p,p+5,cmp);//由高分到低分 
