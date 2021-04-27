@@ -1,32 +1,47 @@
-#include <iostream>  // ¥Ü½d §Q¥Î±Æ§Ç¥i¥H°µªºÅÜ¤Æ¸ê®Æ«¬ºA ³qºÙ => ¦hÁä­È±Æ§Ç 
+#include <iostream>  // ç¤ºç¯„ åˆ©ç”¨æ’åºå¯ä»¥åšçš„è®ŠåŒ–è³‡æ–™å‹æ…‹ é€šç¨± => å¤šéµå€¼æ’åº 
 #include <algorithm>
 using namespace std;
 
-bool cmp(pair<int,int> a,pair<int,int> b)
+bool cmp(pair<int,int> a,pair<int,int> b)//ç”±å¤§åˆ°å°  å…©é …å…©é …ä¹‹é–“éƒ½ç¶­æŒa>b
 {
    return a.second > b.second;
 }
 
-bool cmp2(pair<int,int> a,pair<int,int> b)
+bool cmp2(pair<int,int> a,pair<int,int> b)//ç”±å°åˆ°å¤§  å…©é …å…©é …ä¹‹é–“éƒ½ç¶­æŒa<b
 {
    return a.second < b.second;
 }
 
 int main ()
 {
-   //«Å§i¨S±Æ§Çªºp°}¦C 
-   pair<int,int> p[5]={{1,30},{2,40},{3,20},{4,90},{5,80}};//²Ä¤@¶µ : ¾Ç¥Í½s¸¹ . ²Ä¤G¶µ : ¾Ç¥Í¤À¼Æ 
+   //å®£å‘Šæ²’æ’åºçš„pé™£åˆ— 
+   pair<int,int> p[5]={{1,30},{2,40},{3,20},{4,90},{5,80}};//ç¬¬ä¸€é … : å­¸ç”Ÿç·¨è™Ÿ . ç¬¬äºŒé … : å­¸ç”Ÿåˆ†æ•¸ 
    
    
    //============================================================================================================
    
    
-   //±Æ§Ç¨ç¦¡sort(array address , array address + ªø«×); 
+   //æ’åºå‡½å¼sort(array address , array address + é•·åº¦); 
    sort(p,p+5); 
    
    
-   //¿é¥X 
-   cout << "±Æ§Ç«áµ²ªG : \n";
+   //è¼¸å‡º 
+   cout << "æ’åºå¾Œçµæœ : \n";
+   for (int i=0;i<5;i++)
+   {
+      cout << p[i].first << " " << p[i].second << "\n";
+   }
+   
+   
+   //============================================================================================================
+   https://github.com/asddzxcc1856/2021c-/blob/main/sort()-2.cpp
+   
+   //æ’åºå‡½å¼sort(array address , array address + é•·åº¦ , æ¯”è¼ƒå‡½å¼); 
+   sort(p,p+5,cmp);//ç”±é«˜åˆ†åˆ°ä½åˆ† 
+   
+   
+   //è¼¸å‡º 
+   cout << "æ’åºå¾Œçµæœ : \n";
    for (int i=0;i<5;i++)
    {
       cout << p[i].first << " " << p[i].second << "\n";
@@ -36,27 +51,12 @@ int main ()
    //============================================================================================================
    
    
-   //±Æ§Ç¨ç¦¡sort(array address , array address + ªø«× , ¤ñ¸û¨ç¦¡); 
-   sort(p,p+5,cmp);//¥Ñ°ª¤À¨ì§C¤À 
+   //æ’åºå‡½å¼sort(array address , array address + é•·åº¦ , æ¯”è¼ƒå‡½å¼); 
+   sort(p,p+5,cmp2);//ç”±ä½åˆ†åˆ°é«˜åˆ† 
    
    
-   //¿é¥X 
-   cout << "±Æ§Ç«áµ²ªG : \n";
-   for (int i=0;i<5;i++)
-   {
-      cout << p[i].first << " " << p[i].second << "\n";
-   }
-   
-   
-   //============================================================================================================
-   
-   
-   //±Æ§Ç¨ç¦¡sort(array address , array address + ªø«× , ¤ñ¸û¨ç¦¡); 
-   sort(p,p+5,cmp2);//¥Ñ§C¤À¨ì°ª¤À 
-   
-   
-   //¿é¥X 
-   cout << "±Æ§Ç«áµ²ªG : \n";
+   //è¼¸å‡º 
+   cout << "æ’åºå¾Œçµæœ : \n";
    for (int i=0;i<5;i++)
    {
       cout << p[i].first << " " << p[i].second << "\n";
