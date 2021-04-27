@@ -1,17 +1,17 @@
-#include <iostream>
+#include <iostream> //一般陣列排序用法
 #include <algorithm>
 using namespace std;
 
 int main ()
 {
-   //�ŧi�S�ƧǪ�c�}�C 
+   //宣告沒排序的c陣列 
    int c[5] = {5,3,4,2,1,36,4};
    
-   //�ƧǨ禡sort(array address,array address + ����); 
+   //排序函式sort(array address,array address + 長度); 
    sort(c,c+5);
    
-   //��X 
-   cout << "�Ƨǫᵲ�G : "
+   //輸出 
+   cout << "排序後結果 : "
    for (int i=0;i<5;i++)
    {
       cout << c[i] << " ";
