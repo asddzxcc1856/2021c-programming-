@@ -1,4 +1,4 @@
-#include <iostream>  // 示範 利用排序可以做的變化資料型態 通稱 => 多鍵值排序 
+#include <iostream>  // 示範 利用排序可以做的變化資料型態 通稱 => 多鍵值排序 + 內建資料結構pair 
 #include <algorithm>
 using namespace std;
 
