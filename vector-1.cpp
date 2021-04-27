@@ -1,4 +1,4 @@
-#include <iostream> // ¤Gºûvector
+#include <iostream> // 二維vector
 #include <vector>
 using namespace std;
 
