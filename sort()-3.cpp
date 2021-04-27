@@ -1,18 +1,29 @@
-#include <iostream>  // �ܽd �Q�αƧǥi�H�����ܤƸ�ƫ��A �q�� => �h��ȱƧ� + �ۭq�q��Ƶ��c 
+#include <iostream>  // 示範 利用排序可以做的變化資料型態 通稱 => 多鍵值排序 + 自訂義資料結構 
 #include <algorithm>
 using namespace std;
 
-struct s{
+/*
+
+struct 自訂義資料型態名稱{
+
+   資料型態 資料名稱;
+   資料型態 資料名稱;
+
+};
+
+*/
+
+struct s{ 
    int num;
    int score;
 };
 
-bool cmp(s a,s b)//�Ѥj��p  �ⶵ�ⶵ����������a>b
+bool cmp(s a,s b)//由大到小  兩項兩項之間都維持a>b
 {
    return a.score > b.score;
 }
 
-bool cmp2(s a,s b)//�Ѥp��j  �ⶵ�ⶵ����������a<b
+bool cmp2(s a,s b)//由小到大  兩項兩項之間都維持a<b
 {
    return a.score < b.score;
 }
@@ -23,15 +34,15 @@ int main ()
    
    //============================================================================================================
 /*   
-   //�ۭq�q��Ƶ��cstruct �L�k�����ϥΤ��رƧǨ禡 �����w�q�ƧǨ禡!! 
+   //自訂義資料結構struct 無法直接使用內建排序函式 必須定義排序函式!! 
    
-   //�ƧǨ禡sort(array address , array address + ����); 
+   //排序函式sort(array address , array address + 長度); 
 
    sort(p,p+5);
    
    
-   //��X 
-   cout << "�Ƨǫᵲ�G : \n";
+   //輸出 
+   cout << "排序後結果 : \n";
    for (int i=0;i<5;i++)
    {
       cout << p[i].num << " " << p[i].score << "\n";
@@ -41,12 +52,12 @@ int main ()
    //============================================================================================================
    
    
-   //�ƧǨ禡sort(array address , array address + ���� , ����禡); 
-   sort(p,p+5,cmp);//�Ѱ�����C�� 
+   //排序函式sort(array address , array address + 長度 , 比較函式); 
+   sort(p,p+5,cmp);//由高分到低分 
    
    
-   //��X 
-   cout << "�Ƨǫᵲ�G : \n";
+   //輸出 
+   cout << "排序後結果 : \n";
    for (int i=0;i<5;i++)
    {
       cout << p[i].num << " " << p[i].score << "\n";
@@ -56,12 +67,12 @@ int main ()
    //============================================================================================================
    
    
-   //�ƧǨ禡sort(array address , array address + ���� , ����禡); 
-   sort(p,p+5,cmp2);//�ѧC���찪�� 
+   //排序函式sort(array address , array address + 長度 , 比較函式); 
+   sort(p,p+5,cmp2);//由低分到高分 
    
    
-   //��X 
-   cout << "�Ƨǫᵲ�G : \n";
+   //輸出 
+   cout << "排序後結果 : \n";
    for (int i=0;i<5;i++)
    {
       cout << p[i].num << " " << p[i].score << "\n";
