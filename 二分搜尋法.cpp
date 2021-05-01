@@ -2,6 +2,8 @@
 #include <algorithm>
 using namespace std;
 
+
+// arr[] : 儲存要搜尋的陣列 , L : 存左邊界位置 , R : 存右邊界位置 , index : 存要找的數字 
 int binary_search(int arr[20],int L,int R,int index)
 {
    if(L<=R)
