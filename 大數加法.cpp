@@ -6,7 +6,7 @@ int main ()
    
    string a,b;
    
-   int c[2000];
+   int c[2000]; //儲存總和的陣列
    
    cin >> a >> b;
    
