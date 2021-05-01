@@ -1,4 +1,4 @@
-#include <iostream> //¤j¼Æ¥[ªk 
+#include <iostream> //å¤§æ•¸åŠ æ³• è™•ç†è¶…éä¸€èˆ¬è³‡æ–™å‹æ…‹å¯ä»¥å„²å­˜çš„ä½æ•¸ 
 using namespace std;
 
 int main ()
@@ -14,9 +14,11 @@ int main ()
    int blen = b.length();
    
    
-   if(alen>=blen) //¦pªGa¼Æ¦rªø«×¤j©ób¼Æ¦rªø«× 
+   //ä»¥ä¸‹åˆ†æˆå…©ç¨®æƒ…æ³è™•ç†
+   
+   if(alen>=blen) //å¦‚æœaæ•¸å­—é•·åº¦å¤§æ–¼bæ•¸å­—é•·åº¦ 
    {
-      //§âa©ñ¶i°}¦C¦A´«b©ñ¶i°}¦C 
+      //æŠŠaæ”¾é€²é™£åˆ—å†æ›bæ”¾é€²é™£åˆ— 
       for (int i=0;i<alen;i++)
       {
          c[i] = (a[i]-48);
@@ -25,7 +27,7 @@ int main ()
       {
          c[i] += (b[i]-48);
       }
-      //³B²z¶i¦ì 
+      //è™•ç†é€²ä½ 
       for (int i=alen-1;i>=0;i--)
       {
          if(c[i]>=10)
@@ -34,15 +36,15 @@ int main ()
             c[i]%=10; 
          }
       }
-      //¿é¥X 
+      //è¼¸å‡º 
       for (int i=0;i<alen;i++)
       {
          cout << c[i];
       }
    }
-   else if(blen>alen) //¦pªGb¼Æ¦rªø«×¤j©óa¼Æ¦rªø«× 
+   else if(blen>alen) //å¦‚æœbæ•¸å­—é•·åº¦å¤§æ–¼aæ•¸å­—é•·åº¦ 
    {
-      //§âb©ñ¶i°}¦C¦A´«a©ñ¶i°}¦C
+      //æŠŠbæ”¾é€²é™£åˆ—å†æ›aæ”¾é€²é™£åˆ—
       for (int i=0;i<blen;i++)
       {
          c[i] = (b[i]-48);
@@ -51,7 +53,7 @@ int main ()
       {
          c[i] += (a[i]-48);
       }
-      //³B²z¶i¦ì 
+      //è™•ç†é€²ä½ 
       for (int i=blen-1;i>=0;i--)
       {
          if(c[i]>=10)
@@ -60,7 +62,7 @@ int main ()
             c[i]%=10; 
          }
       }
-      //¿é¥X 
+      //è¼¸å‡º 
       for (int i=0;i<blen;i++)
       {
          cout << c[i];
