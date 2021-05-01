@@ -23,9 +23,9 @@ int main ()
       {
          c[i] = (a[i]-48);
       }
-      for (int i=0;i<blen;i++)
+      for (int j=alen,i=blen;j>=alen-blen;j--,i--)
       {
-         c[i] += (b[i]-48);
+         c[j] += (b[i]-48);
       }
       //處理進位 
       for (int i=alen-1;i>=0;i--)
@@ -49,9 +49,9 @@ int main ()
       {
          c[i] = (b[i]-48);
       }
-      for (int i=0;i<alen;i++)
+      for (int j=blen,i=alen;j>=blen-alen;j--,i--)
       {
-         c[i] += (a[i]-48);
+         c[j] += (a[i]-48);
       }
       //處理進位 
       for (int i=blen-1;i>=0;i--)
