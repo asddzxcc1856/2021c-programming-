@@ -1,4 +1,4 @@
-#include <stdio.h> // Stack ¹ê§@ - c
+#include <stdio.h> // Stack å¯¦ä½œ - c
 
 struct node{
     int data;
