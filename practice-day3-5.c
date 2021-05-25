@@ -1,4 +1,4 @@
-#include <stdio.h> // binary search tree ¹ê§@ - c
+#include <stdio.h> // binary search tree å¯¦ä½œ - c
 
 struct node{
     struct node *leftptr;
@@ -69,7 +69,7 @@ void insertNode(struct node **root,int val)
         }
         else
         {
-            printf("­«½Æ\n");
+            printf("Â­Â«Â½Ã†\n");
         }
     }
 
