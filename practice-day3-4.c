@@ -1,4 +1,4 @@
-#include <stdio.h> // Queue ¹ê§@ - c
+#include <stdio.h> // Queue å¯¦ä½œ - c
 
 struct node{
     int data;
