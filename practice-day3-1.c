@@ -1,4 +1,4 @@
-#include <stdio.h> // ¤Q¶i¦ì Âà ¤G¶i¦ì ¹ê§@ - c
+#include <stdio.h> // äºŒé€²ä½ è½‰ åé€²ä½ å¯¦ä½œ -c
 
 int main (void)
 {
