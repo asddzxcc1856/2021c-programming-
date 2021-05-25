@@ -1,4 +1,4 @@
-#include <stdio.h>  // Linked list ¹ê§@ - C
+#include <stdio.h>  // Linked list å¯¦ä½œ - C
 
 struct t_node{
     int data;
@@ -54,7 +54,7 @@ struct t_node* insert_v(struct t_node *np,int val)
     }
     else
     {
-        printf("°O¾ĞÅé¤£°÷.\n");
+        printf("è¨˜æ†¶é«”ä¸å¤ .\n");
         return NULL;
     }
 }
@@ -95,15 +95,15 @@ int main(void)
 {
     struct t_node* head;
     head = NULL;
-    //´¡¤J­È
+    //æ’å…¥å€¼
     head = insert_v(head,14);
     head = insert_v(head,13);
     head = insert_v(head,10);
     head = insert_v(head,18);
-    //§R°£
+    //åˆªé™¤
     head = delete_v(head,14);
 
-    //¿é¥X
+    //è¼¸å‡º
     displist(head);
 
     return 0;
